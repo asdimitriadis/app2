@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  loginPath: 'login',
+  logoutPath: 'logout'
 };

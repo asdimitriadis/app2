@@ -1,0 +1,39 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+
+    <a class="navbar-brand" routerLink="">
+      <img [src]="['assets/images/metis-logo.png']" />
+    </a>
+
+
+    <button mat-button [matMenuTriggerFor]="ccMenu" title="Schema Management">Select a JSON File</button>
+    <mat-menu #ccMenu="matMenu" [overlapTrigger]="false">
+      <ng-template matMenuContent>
+        <button mat-menu-item routerLink="stix_object">binary</button>
+        <button mat-menu-item routerLink="stix_object">bundle</button>
+        <button mat-menu-item routerLink="stix_object">extension</button>
+<!--        here I will have the json files from the /src/assets/jsonfiles -->
+<!-- this list is not fixed and someone can add a json file -->
+<!--        if someone clicks on one button then the app1 should open with the selected file -->
+<!--        therefore, I would like to pass the file as parameter to the app1 -->
+<!--        app1 has a method to open a file -->
+      </ng-template>
+    </mat-menu>
+
+
+
+    <span class="fill-remaining-space"></span>
+
+    <button mat-button [matMenuTriggerFor]="help">Help</button>
+    <mat-menu #help="matMenu" [overlapTrigger]="false">
+      <ng-template matMenuContent>
+        <button mat-menu-item routerLink="about">About</button>
+        <button mat-menu-item routerLink="docs">User Guide</button>
+      </ng-template>
+    </mat-menu>
+
+
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
